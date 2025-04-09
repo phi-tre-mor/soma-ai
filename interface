@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soma Library Interface</title>
+  <style>
+    /* Reset basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: sans-serif;
+      color: #333;
+      background: #f8f8f8;
+    }
+
+    /* Layout container: top nav + 2-column split */
+    .layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Top nav bar */
+    .topbar {
+      background: #4a5459;
+      color: #fff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar h1 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Content area for split columns */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      height: calc(100% - 50px); /* subtract topbar height approx */
+    }
+
+    /* Each iframe half */
+    .pane {
+      flex: 1;
+      border: none;
+      min-width: 50px;
+      /* Adjust if you want scrollbars always or auto */
+      overflow: auto;
+    }
+
+    /* Optional: a small handle or border between iframes */
+    .pane:not(:last-child) {
+      border-right: 2px solid #dddddd;
+    }
+
+    /* Footer (optional) */
+    .footer {
+      text-align: center;
+      padding: 8px;
+      background: #ececec;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <h1>Soma Library Portal</h1>
+      <!-- Add any nav links or user info here -->
+    </div>
+
+    <!-- 2-COLUMN SPLIT -->
+    <div class="content">
+      <!-- Left column: Paperless-ngx -->
+      <iframe
+        class="pane"
+        src="https://YOUR-PAPERLESS.elest.app"
+        title="Paperless Archive">
+      </iframe>
+
+      <!-- Right column: AnythingLLM -->
+      <iframe
+        class="pane"
+        src="https://YOUR-ANYTHINGLLM.elest.app"
+        title="AI Chat">
+      </iframe>
+    </div>
+
+    <!-- FOOTER (optional) -->
+    <div class="footer">
+      &copy; 2025 Soma Library. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
