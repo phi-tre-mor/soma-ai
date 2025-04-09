@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Soma Library Interface</title>
+  <title>Soma Library Portal</title>
   <style>
     /* Reset basic styles */
     * {
@@ -53,8 +53,7 @@
       flex: 1;
       border: none;
       min-width: 50px;
-      /* Adjust if you want scrollbars always or auto */
-      overflow: auto;
+      overflow: auto; /* or scroll if you want to force scrollbars */
     }
 
     /* Optional: a small handle or border between iframes */
@@ -77,23 +76,22 @@
     <!-- TOP BAR -->
     <div class="topbar">
       <h1>Soma Library Portal</h1>
-      <!-- Add any nav links or user info here -->
     </div>
 
     <!-- 2-COLUMN SPLIT -->
     <div class="content">
-      <!-- Left column: Paperless-ngx -->
+      <!-- Left column: Paperless Library -->
       <iframe
         class="pane"
-        src="https://YOUR-PAPERLESS.elest.app"
-        title="Paperless Archive">
+        src="https://soma-u40416.vm.elestio.app"
+        title="Soma Library (Paperless)">
       </iframe>
 
-      <!-- Right column: AnythingLLM -->
+      <!-- Right column: AnythingLLM Chat -->
       <iframe
         class="pane"
-        src="https://YOUR-ANYTHINGLLM.elest.app"
-        title="AI Chat">
+        src="https://soma-ai-u40416.vm.elestio.app"
+        title="Soma AI Chat">
       </iframe>
     </div>
 
